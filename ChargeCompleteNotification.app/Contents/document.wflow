@@ -48,7 +48,7 @@
 					<dict>
 						<key>tokenizedValue</key>
 						<array>
-							<string>OSX_Charge_Detecting</string>
+							<string>OSX_Battery_Charge_Detection</string>
 						</array>
 					</dict>
 				</dict>
@@ -70,7 +70,7 @@
 					<key>subtitle</key>
 					<string>By ITXiaoPang</string>
 					<key>title</key>
-					<string>OSX_Charge_Detecting</string>
+					<string>OSX_Battery_Charge_Detection</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.Display-Notification</string>
