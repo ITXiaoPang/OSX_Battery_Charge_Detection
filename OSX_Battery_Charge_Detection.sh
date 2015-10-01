@@ -9,8 +9,6 @@ do
     battery_percent=$(echo $info|awk '{print $7}')
     if [ "$battery_percent" == "100%;" ]
     then
-      echo sleep
-      sleep 1800
       open /Applications/ChargeCompleteNotification.app
     fi
   fi
