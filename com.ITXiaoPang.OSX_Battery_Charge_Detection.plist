@@ -12,5 +12,9 @@
     <true/>
     <key>RunAtLoad</key>
     <true/>
+    <key>StandardOutPath</key>
+    <string>/usr/local/var/log/OSX_Battery_Charge_Detection.log</string>
+    <key>StandardErrorPath</key>
+    <string>/usr/local/var/log/OSX_Battery_Charge_Detection.log</string>
 </dict>
 </plist>
