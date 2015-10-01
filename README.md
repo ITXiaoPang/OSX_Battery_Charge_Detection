@@ -6,7 +6,7 @@
 
 Detective each 5 mins.
 
-After the battery charging to 100% than show a notification.
+After the battery charging to 100% then show a notification.
 
 
 
