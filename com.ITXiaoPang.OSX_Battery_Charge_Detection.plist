@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Label</key>
-    <string>com.ITXiaoPang.CheckPower.plist</string>
+    <string>com.ITXiaoPang.OSX_Battery_Charge_Detection.plist</string>
     <key>ProgramArguments</key>
     <array>
         <string>/usr/local/bin/OSX_Battery_Charge_Detection.sh</string>
