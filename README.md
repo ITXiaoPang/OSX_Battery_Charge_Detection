@@ -4,9 +4,9 @@
 
 ## What can I do?
 
-Detective each 5 mins.
+Detective each 1 mins.
 
-After the battery charging to 100% then show a notification.
+After the battery charging **really completed** then show a notification.
 
 
 
@@ -17,8 +17,6 @@ Clone me to anywhere:
 `git clone https://github.com/ITXiaoPang/OSX_Battery_Charge_Detection.git`
 
 ------
-
-
 
 Run the script Initial.sh (**Recommend**)
 
