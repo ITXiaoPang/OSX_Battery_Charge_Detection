@@ -1,16 +1,25 @@
 #!/bin/bash
+last_remaining=-1
 while true
 do
-  pmset -g ps|grep InternalBattery|awk '{print $2}'
-  info=$(system_profiler SPPowerDataType|grep -E "Charge Remaining|Full Charge Capacity")
+  info=$(system_profiler SPPowerDataType|grep -E "Charge Remaining|Full Charge Capacity|Connected")
   remaining=$(echo $info|awk '{print $4}')
   full=$(echo $info|awk '{print $9}')
+  Charging=$(echo $info|awk '{print $11}')
+
+  # Show percent
   percent=$(echo "scale=0;$remaining*100/$full"|bc)
   echo $remaining/$full=$percent%
-  if [ "$percent" -gt "95" ]
+
+  if [ "$Charging" = "Yes" ]
   then
-    echo Call Notification
-    open /Applications/ChargeCompleteNotification.app
+    if [ "$remaining" = "$last_remaining" ] || [ "$remaining" = "$full" ]
+    then
+      echo Charging complete.
+      open /Applications/ChargeCompleteNotification.app
+    else
+      last_remaining=$remaining
+    fi
   fi
-  sleep 5
+  sleep 60
 done
