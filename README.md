@@ -1,12 +1,16 @@
 # Battery Charge Detection for OSX
 
+A healthy way to use your battery.
 
+------
 
 ## What can I do?
 
 Detective each 1 mins.
 
 After the battery charging **really completed** then show a notification.
+
+When the percent of battery is **really** lower than 20% then show a notification.
 
 
 
@@ -32,6 +36,7 @@ Type the command underside
 cd OSX_Battery_Charge_Detection
 cp -a OSX_Battery_Charge_Detection.sh /usr/local/bin/
 cp -a ChargeCompleteNotification.app /Applications/
+cp -a SuggestChargeNotification.app /Applications/
 ```
 
 
