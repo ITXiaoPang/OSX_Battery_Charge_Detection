@@ -20,6 +20,13 @@ do
     else
       last_remaining=$remaining
     fi
+  else
+    last_remaining=-1
+    if [ "$percent" -lt 20 ]
+    then
+      echo Suggest charge now.
+      open /Applications/SuggestChargeNotification.app
+    fi
   fi
   sleep 60
 done
