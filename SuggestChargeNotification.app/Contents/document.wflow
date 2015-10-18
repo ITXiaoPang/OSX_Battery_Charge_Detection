@@ -34,7 +34,7 @@
 					<dict>
 						<key>tokenizedValue</key>
 						<array>
-							<string>Please unplug the chargers.</string>
+							<string>Please plug the chargers.</string>
 						</array>
 					</dict>
 					<key>subtitle</key>
@@ -48,7 +48,7 @@
 					<dict>
 						<key>tokenizedValue</key>
 						<array>
-							<string>Charging completed.</string>
+							<string>Suggest charge now.</string>
 						</array>
 					</dict>
 				</dict>
@@ -66,11 +66,11 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>message</key>
-					<string>Please unplug the chargers.$@</string>
+					<string>Please plug the chargers.</string>
 					<key>subtitle</key>
 					<string>By ITXiaoPang http://www.ossky.org</string>
 					<key>title</key>
-					<string>Charging completed.</string>
+					<string>Suggest charge now.</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.Display-Notification</string>
@@ -86,16 +86,14 @@
 				</array>
 				<key>Class Name</key>
 				<string>AMDisplayNotificationAction</string>
-				<key>IgnoresInput</key>
-				<false/>
 				<key>InputUUID</key>
-				<string>0B02A81C-D03F-4C21-82D2-8940FC091049</string>
+				<string>BC72360B-56CF-411A-ACC0-51D6233B510D</string>
 				<key>Keywords</key>
 				<array/>
 				<key>OutputUUID</key>
-				<string>23A4DD6E-7F32-4047-BB17-A57DAFF57635</string>
+				<string>B3F20E00-163C-4321-9C19-0BA7274E4557</string>
 				<key>UUID</key>
-				<string>7F29821A-D742-4F43-88F3-C11B67BE4B3D</string>
+				<string>224A6426-EC89-40C8-AEB9-FE702081F620</string>
 				<key>UnlocalizedApplications</key>
 				<array>
 					<string>Automator</string>
@@ -142,10 +140,12 @@
 						<string>2</string>
 					</dict>
 				</dict>
+				<key>conversionLabel</key>
+				<integer>0</integer>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>438.500000:312.000000</string>
+				<string>438.500000:260.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Display Notification.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>

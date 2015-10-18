@@ -1,18 +1,32 @@
 #!/bin/bash
-# Detect whether the charge has been completed.
-while True
+last_remaining=-1
+while true
 do
-  info=$(pmset -g ps)
-  drawing_from=$(echo $info|awk '{print $4 $5}')
-  if [ "$drawing_from" == "'ACPower'" ]
+  info=$(system_profiler SPPowerDataType|grep -E "Charge Remaining|Full Charge Capacity|Connected")
+  remaining=$(echo $info|awk '{print $4}')
+  full=$(echo $info|awk '{print $9}')
+  Charging=$(echo $info|awk '{print $11}')
+
+  # Show percent
+  percent=$(echo "scale=0;$remaining*100/$full"|bc)
+  echo $remaining/$full=$percent%
+
+  if [ "$Charging" = "Yes" ]
   then
-    battery_percent=$(echo $info|awk '{print $7}')
-    echo $battery_percent
-    if [ "$battery_percent" == "100%;" ]
+    if [ "$remaining" = "$last_remaining" ] || [ "$remaining" = "$full" ]
     then
-      echo Call Notification
+      echo Charging complete.
       open /Applications/ChargeCompleteNotification.app
+    else
+      last_remaining=$remaining
+    fi
+  else
+    last_remaining=-1
+    if [ "$percent" -lt 20 ]
+    then
+      echo Suggest charge now.
+      open /Applications/SuggestChargeNotification.app
     fi
   fi
-  sleep 300
+  sleep 60
 done
